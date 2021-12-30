@@ -1,5 +1,6 @@
 package br.com.gaudium.builder.taximachine;
 
+import java.awt.geom.NoninvertibleTransformException;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -133,6 +134,7 @@ public class Interpreter_API extends Interpreter {
 		String firebaseTaxiID = jsonResponse.get("id_firebase_taxista").toString();
 		String projectNum = jsonResponse.get("projectnum").toString();
 		String bundlePassenger = jsonResponse.get("bundle_passageiro_android").toString();
+		String bundleTaxi = jsonResponse.get("bundle_taxi").toString();
 
 		String taxiFirebaseProjNum = getProjNum(firebaseTaxiID);
 		String taxiFirebaseID = getFirebaseID(firebaseTaxiID);
@@ -154,8 +156,9 @@ public class Interpreter_API extends Interpreter {
 		hashVars.put(FIREBASETAXISTAPROJ, taxiFirebaseProjNum);
 		hashVars.put(PROJECTNUM, projectNum);
 		hashVars.put(KEYWORD, keyword);
-		hashVars.put(NOMECOOP, getCoopName(name));
+		hashVars.put(NOMECOOP, getCoopName(bundleTaxi));
 		hashVars.put("PLANO", "Pro");
+		System.out.println(jsonResponse);
 
 		if (!telephone.equals("")) {
 			hashVars.put(TELEFONE, telephone);
@@ -231,9 +234,10 @@ public class Interpreter_API extends Interpreter {
 		return removeSuffix;
 	}
 
-	// Retorna o nome da cooperativa a partir do nome retornado na API - apenas
+	// Retorna o nome da cooperativa a partir do nome do pacote de taxi, retirado o "br.com." e o ".taxi." enquanto a API não retorna o nome_bundle
 	// retira espaço
-	private static String getCoopName(String nameApp) {
-		return nameApp.replaceAll("\\s", "");
+	private static String getCoopName(String pacoteTaxi) {
+		String nome = pacoteTaxi.replace("br.com.", "");
+		return nome.substring(0, nome.indexOf(".taxi."));
 	}
 }
