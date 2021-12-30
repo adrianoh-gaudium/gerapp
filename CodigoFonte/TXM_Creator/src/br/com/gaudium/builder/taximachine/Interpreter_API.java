@@ -37,7 +37,7 @@ public class Interpreter_API extends Interpreter {
 		String queryParams = "cod_interno=" + codigoProj;
 
 		String url = data.getServidorConfAPI() + data.getUrlConfAPI();
-		if (!url.startsWith("http://") || !url.startsWith("https://")) {
+		if (!url.startsWith("http://") && !url.startsWith("https://")) {
 			url = "https://" + url;
 		}
 
