@@ -1,0 +1,12 @@
+Este aplicativo foi desenhado para quem busca um serviço de táxi presente no próprio bairro e que garanta que você e sua família serão atendidos por um taxista conhecido com segurança.
+
+Aqui você tem linha direta para solucionar seus problemas, basta nos ligar! 
+
+Nosso aplicativo permite que você chame um de nossos táxis e acompanhe o deslocamento do carro no mapa, sendo avisado quando ele estiver na sua porta.
+ 
+Você ainda consegue ver todos os táxis perto da sua localização com a informação de ocupado ou livre, dando ao nosso cliente uma visão completa da nossa rede de serviço.
+
+A cobrança funciona como a chamada de um taxi normal, ou seja, só inicia a contagem quando você entra no carro.
+
+Aqui você não é mais um cliente em muitos, aqui você é o cliente do nosso bairro.
+

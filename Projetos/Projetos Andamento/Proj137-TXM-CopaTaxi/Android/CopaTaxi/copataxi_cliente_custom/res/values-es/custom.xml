@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Copa Táxi</string>
+    <string name="site">http://copataxi.com.br</string>
+    <string name="emailsobre">supervisora@copataxi.com.br</string>
+</resources>

@@ -1,0 +1,6 @@
+# Arquivo de log para criação de apps para a bandeira Proj137-TXM-CopaTaxi
+# INICIO: 20/07/2021 12:57:21
+------------------[12:57:21] Projeto 137: processando arquivo 'dados.d'
+[12:57:21] Montando imagens
+[12:57:22] [ERRO] Projeto 137: processamento das imagens falhou
+#------------Processamento encerrado em: 20/07/2021 12:57:22

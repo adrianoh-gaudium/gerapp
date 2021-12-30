@@ -1,0 +1,10 @@
+Este aplicativo foi desenhado para quem busca um serviço de mototáxi presente no próprio bairro e que garanta que você e sua família serão atendidos por um mototaxista conhecido com segurança.
+Aqui você tem linha direta para solucionar seus problemas, basta nos ligar!
+
+Nosso aplicativo permite que você chame um de nossos mototáxis e acompanhe o deslocamento do veículo no mapa, sendo avisado quando ele estiver na sua porta.
+
+Você ainda consegue ver todos os mototáxis perto da sua localização com a informação de ocupado ou livre dando ao nosso cliente uma visão completa da nossa rede de serviço.
+
+A cobrança funciona como a chamada de um mototáxi normal, ou seja, só inicia a contagem quando você sobe na moto.
+
+Aqui você não é mais um cliente em muitos, aqui você é o cliente do nosso bairro.

@@ -1,0 +1,22 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/fastlane/fastlane/blob/master/deliver/Deliverfile.md
+
+
+###################### Automatically generated ######################
+# Feel free to remove the following line if you use fastlane (which you should)
+
+username "gaudiumtecnicos@gmail.com" # your Apple ID user
+app_version "1.0"
+
+app_review_information(
+  first_name: "Ricardo",
+  last_name: "Goes",
+  phone_number: "+5521996083471",
+  email_address: "rsagoes@gaudium.com.br",
+  demo_user: "passmch@gmail.com",
+  demo_password: "123456",
+  notes: "Use passenger account below and if possible simulate your location at Rio de Janeiro City, Brazil, so you can view some active taxis. The area covered is restricted to Brazil."
+)
+app_rating_config_path "./app_rating.json"
+app_icon './logo.png'

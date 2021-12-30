@@ -1,0 +1,17 @@
+# Arquivo de log para criação de apps para a bandeira Proj2227-TXM-NOVO
+# INICIO: 23/12/2020 11:31:49
+------------------[10:31:49] Projeto 2227: processando arquivo 'dados.d'
+[10:31:49] Montando imagens
+[10:31:53] Gerando mapas para NOVO1
+[10:31:56] Criando mapa.png
+[10:31:57] Criando mapa_reskin.png
+[10:31:58] Criando maparotacliente.png
+[10:31:58] Criando maparotacliente_reskin.png
+[10:31:58] Criando maparotataxista.png
+[10:31:59] Criando QRCodes
+[10:32:01] Criando flyer
+[10:32:22] Compondo imagens para apps
+[10:32:23] Criando cartão
+[10:32:24] Criando adesivo
+[10:32:27] Zipando arquivos
+[10:33:35] ---------------------------------

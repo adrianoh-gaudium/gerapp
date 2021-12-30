@@ -1,0 +1,69 @@
+-e =============== Projeto 2227 ===============
+ 
+Chave de App: 
+chNOVO-H0UitVN 
+
+Google SHA1: 
+48:FD:A9:A9:14:5D:E6:92:21:6E:04:81:76:CC:A5:4C:F3:DB:5C:33 
+
+Facebook Hash: 
+SP2pqRRd5pIhbgSBdsylTPPbXDM=
+ 
+-------------------------------------------
+
+br.com.novo.passenger.taximachine
+br.com.novo.taxi.taximachine
+5A:3E:56:1E:F2:4C:9E:CA:95:80:22:2B:76:D7:4B:28:E1:76:E1:E8
+
+br.com.taximachine.novo
+
+Facebook Hash
+Wj5WHvJMnsqVgCIrdtdLKOF24eg=
+br.com.novo.passenger.drivermachine
+br.com.novo.taxi.drivermachine
+5A:3E:56:1E:F2:4C:9E:CA:95:80:22:2B:76:D7:4B:28:E1:76:E1:E8
+
+br.com.drivermachine.novo
+
+Facebook Hash
+Wj5WHvJMnsqVgCIrdtdLKOF24eg=
+br.com.novo1.passenger.drivermachine
+br.com.novo1.taxi.drivermachine
+54:15:52:6D:A6:0F:7C:3C:39:61:23:C0:A8:49:A7:3F:FA:ED:82:1F
+
+br.com.drivermachine.novo1
+
+Facebook Hash
+VBVSbaYPfDw5YSPAqEmnP/rtgh8=
+br.com.novo1.passenger.drivermachine
+br.com.novo1.taxi.drivermachine
+54:15:52:6D:A6:0F:7C:3C:39:61:23:C0:A8:49:A7:3F:FA:ED:82:1F
+
+br.com.drivermachine.novo1
+
+Facebook Hash
+VBVSbaYPfDw5YSPAqEmnP/rtgh8=
+br.com.novo1.passenger.drivermachine
+br.com.novo1.taxi.drivermachine
+54:15:52:6D:A6:0F:7C:3C:39:61:23:C0:A8:49:A7:3F:FA:ED:82:1F
+
+br.com.drivermachine.novo1
+
+Facebook Hash
+VBVSbaYPfDw5YSPAqEmnP/rtgh8=
+br.com.novo1.passenger.drivermachine
+br.com.novo1.taxi.drivermachine
+54:15:52:6D:A6:0F:7C:3C:39:61:23:C0:A8:49:A7:3F:FA:ED:82:1F
+
+br.com.drivermachine.novo1
+
+Facebook Hash
+VBVSbaYPfDw5YSPAqEmnP/rtgh8=
+br.com.novo1.passenger.drivermachine
+br.com.novo1.taxi.drivermachine
+54:15:52:6D:A6:0F:7C:3C:39:61:23:C0:A8:49:A7:3F:FA:ED:82:1F
+
+br.com.drivermachine.novo1
+
+Facebook Hash
+VBVSbaYPfDw5YSPAqEmnP/rtgh8=

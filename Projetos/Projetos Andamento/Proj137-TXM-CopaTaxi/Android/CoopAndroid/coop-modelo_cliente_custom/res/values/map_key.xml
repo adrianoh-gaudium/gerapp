@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="map_key">_MAPKEYCLIENTE_</string> 
+    <string name="facebook_app_id" translatable="false">_FACEBOOKPASSAGEIRO_</string>
+    <string name="fb_login_protocol_scheme">fb_FACEBOOKPASSAGEIRO_</string>
+    <string name="account_kit_client_token" translatable="false">_ACCKITKEY_</string>
+
+</resources>

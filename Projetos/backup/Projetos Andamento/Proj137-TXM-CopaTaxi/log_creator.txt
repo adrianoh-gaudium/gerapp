@@ -1,0 +1,10 @@
+# Arquivo de log para criação de apps para a bandeira Proj137-TXM-CopaTaxi
+# INICIO: 22/05/2020 15:46:35
+------------------[15:46:35] Projeto 137: processando arquivo 'dados.d'
+[15:46:35] Montando imagens
+[15:46:39] Adicionando dados da bandeira aos arquivos-exemplo
+[15:46:39] Criando certificação digital e chaves de assinatura
+[15:47:51] Renomeando pastas
+[15:47:51] Criando cliente CopaTaxi / chCopaTaxi-g%yjT(d
+[15:47:51] [ERRO] Criação do cliente CopaTaxi - response code = 301
+[15:47:51] ---------------------------------

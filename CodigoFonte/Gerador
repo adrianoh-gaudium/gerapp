@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# move para pasta onde o script está sendo executado
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd "$SCRIPT_DIR"
+
+# abrir gerador
+java -jar ./jar/TXM_Creator.jar

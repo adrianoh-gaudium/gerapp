@@ -1,0 +1,17 @@
+# Arquivo de log para criação de apps para a bandeira Proj825-TXM-VillageCar
+# INICIO: 05/12/2019 14:52:57
+------------------[13:52:57] Projeto 825: processando arquivo 'dados.d'
+[13:52:57] Montando imagens
+[13:53:01] Gerando mapas para VillageCar
+[13:53:06] Criando mapa.png
+[13:53:07] Criando mapa_reskin.png
+[13:53:08] Criando maparotacliente.png
+[13:53:09] Criando maparotacliente_reskin.png
+[13:53:10] Criando maparotataxista.png
+[13:53:11] Criando QRCodes
+[13:53:14] Criando flyer
+[13:53:35] Compondo imagens para apps
+[13:53:36] Criando cartão
+[13:53:37] Criando adesivo
+[13:53:41] Zipando arquivos
+[13:54:49] ---------------------------------
