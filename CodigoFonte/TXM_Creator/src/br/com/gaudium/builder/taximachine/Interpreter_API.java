@@ -23,7 +23,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-/** 
+/**
  * Classe responsável por interpretar a API e alterar o valor de hashVars
  **/
 public class Interpreter_API extends Interpreter {
@@ -36,13 +36,13 @@ public class Interpreter_API extends Interpreter {
 	public boolean go(String codigoProj) {
 		String queryParams = "cod_interno=" + codigoProj;
 
-		String url = data.getServidorConfAPI()+data.getUrlConfAPI();
-		if (!data.getServidorConfAPI().startsWith("http://")) {
-			url = "http://"+url;
+		String url = data.getServidorConfAPI() + data.getUrlConfAPI();
+		if (!url.startsWith("http://") || !url.startsWith("https://")) {
+			url = "https://" + url;
 		}
 
 		url = url + "?" + queryParams;
-
+		System.out.println("URL = " + url);
 		HttpClient httpClient = HttpClientBuilder.create().build();
 		HttpGet request = new HttpGet(url);
 		request.addHeader("Content-type", "application/x-www-form-urlencoded");
@@ -56,7 +56,8 @@ public class Interpreter_API extends Interpreter {
 			status = response.getStatusLine().getStatusCode();
 		} catch (Exception e) {
 			callback("[ERRO] Projeto " + codigoProj
-					+ ": não foi possível conectar com a API para leitura da configuração do cliente");
+					+ ": não foi possível conectar com a API para leitura da configuração do cliente. "
+					+ e.getLocalizedMessage());
 			return false; // ir para o próximo código de projeto.
 		}
 
@@ -81,7 +82,7 @@ public class Interpreter_API extends Interpreter {
 					} catch (Exception e) {
 					}
 				}
-			}			
+			}
 
 			JSONParser jp = new JSONParser();
 			JSONObject jsonResponse;
@@ -100,18 +101,19 @@ public class Interpreter_API extends Interpreter {
 			}
 		} else {
 			callback("[ERRO] Retorno da API do projeto " + codigoProj + " - response code = " + status);
+
 		}
-		
+
 		// Aqui "hashVars" estará preenchido e será complementado pelo método abaixo.
 		this.ajustar();
-		
+
 		return true;
 
 	}
-	
+
 	// Popula a variável hashVars com os dados do json de resposta da API
 	private void populateHashVars(JSONObject jsonResponse) {
-		
+
 		String itunesTeamID = jsonResponse.get("id_time_itunes").toString();
 		String city = jsonResponse.get("cidade").toString();
 		String neighborhood = jsonResponse.get("bairro").toString();
@@ -131,13 +133,13 @@ public class Interpreter_API extends Interpreter {
 		String firebaseTaxiID = jsonResponse.get("id_firebase_taxista").toString();
 		String projectNum = jsonResponse.get("projectnum").toString();
 		String bundlePassenger = jsonResponse.get("bundle_passageiro_android").toString();
-		
+
 		String taxiFirebaseProjNum = getProjNum(firebaseTaxiID);
 		String taxiFirebaseID = getFirebaseID(firebaseTaxiID);
 		String passengerFirebaseProjNum = getProjNum(firebasePassengerID);
 		String passengerFirebaseID = getFirebaseID(firebasePassengerID);
 		String keyword = getKeyword(bundlePassenger);
-		
+
 		hashVars.put(CIDADE, city);
 		hashVars.put(BAIRRO, neighborhood);
 		hashVars.put(UF, uf);
@@ -154,48 +156,48 @@ public class Interpreter_API extends Interpreter {
 		hashVars.put(KEYWORD, keyword);
 		hashVars.put(NOMECOOP, getCoopName(name));
 		hashVars.put("PLANO", "Pro");
-		   
-		if (telephone != "") {
+
+		if (!telephone.equals("")) {
 			hashVars.put(TELEFONE, telephone);
 		}
-		
-		if (urlItunes != "") {
+
+		if (!urlItunes.equals("")) {
 			hashVars.put(URLITUNES, urlItunes);
 		}
-		
-		if (googleMapsKeyIOS != "") {
+
+		if (!googleMapsKeyIOS.equals("")) {
 			hashVars.put(MAPKEYIOS, googleMapsKeyIOS);
 		}
-		
-		if (itunesTeamID != "") {
+
+		if (!itunesTeamID.equals("")) {
 			hashVars.put(ITUNESTEAMID, itunesTeamID);
 		}
-		
-		if (userItunes != "") {
+
+		if (!userItunes.equals("")) {
 			hashVars.put(USUARIOITUNES, userItunes);
 		}
-		
-		if(teamNameItunes != "") {
+
+		if (!teamNameItunes.equals("")) {
 			hashVars.put(ITUNESTEAMNAME, teamNameItunes);
 		}
-		
-		if (email != "") {
+
+		if (!email.equals("")) {
 			hashVars.put(EMAIL, email);
 		}
 	}
-	
+
 	// Dependendo do tipo do aplicativo retornado na API, retorna o correto nome
 	private static String getAppType(String typeLetter) {
-		if (typeLetter == "E") {
+		if (typeLetter.equalsIgnoreCase("E")) {
 			return "Motorista";
-		} else if (typeLetter == "T") {
+		} else if (typeLetter.equalsIgnoreCase("T")) {
 			return "Taxista";
-		} else if (typeLetter == "M") {
+		} else if (typeLetter.equalsIgnoreCase("M")) {
 			return "Mototaxista";
 		}
 		return "";
 	}
-	
+
 	// Retorna o número do projeto a partir do ID do firebase
 	private static String getProjNum(String firebaseID) {
 		String answer = "";
@@ -213,22 +215,24 @@ public class Interpreter_API extends Interpreter {
 		}
 		return answer;
 	}
-	
+
 	// Retorna o ID do projeto Firebase a partir do ID completo
 	private static String getFirebaseID(String firebaseID) {
 		return firebaseID.substring(firebaseID.lastIndexOf(":") + 1);
 	}
-	
+
 	// A partir do bundle id retorna a keyword (mesmo nome da pasta Dropbox)
 	private static String getKeyword(String bundlePassenger) {
 		String textFrom = "br.com.";
-		String withoutPrefix = bundlePassenger.substring(bundlePassenger.indexOf(textFrom) + textFrom.length(), bundlePassenger.length());
+		String withoutPrefix = bundlePassenger.substring(bundlePassenger.indexOf(textFrom) + textFrom.length(),
+				bundlePassenger.length());
 		String removeSuffix = withoutPrefix.substring(0, withoutPrefix.indexOf("."));
-		
+
 		return removeSuffix;
 	}
-	
-	// Retorna o nome da cooperativa a partir do nome retornado na API - apenas retira espaço
+
+	// Retorna o nome da cooperativa a partir do nome retornado na API - apenas
+	// retira espaço
 	private static String getCoopName(String nameApp) {
 		return nameApp.replaceAll("\\s", "");
 	}

@@ -6,7 +6,6 @@ import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.SystemColor;
-import java.awt.Taskbar;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -83,7 +82,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		try {
-			Taskbar.getTaskbar().setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/resources/machine-branco.png")));
+//			Taskbar.getTaskbar().setIconImage(Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/resources/machine-branco.png")));
 		} catch(Exception e) {}
 		//		Application.getApplication().setDockIconImage(
 		//				Toolkit.getDefaultToolkit().getImage(Main.class.getResource("/resources/machine-branco.png")));
