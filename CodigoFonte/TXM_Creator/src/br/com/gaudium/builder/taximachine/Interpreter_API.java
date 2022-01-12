@@ -124,7 +124,7 @@ public class Interpreter_API extends Interpreter {
 		String type = jsonResponse.get("tipo").toString();
 		String googleMapsKeyAndroid = jsonResponse.get("chave_google_map_android").toString();
 		String googleMapsKeyIOS = jsonResponse.get("chave_google_map_android").toString();
-		String facebookPassenger = jsonResponse.get("id_facebook_passageiro").toString();
+		String facebookPassenger = jsonResponse.get("fb_app_id_passageiro").toString();
 		String appKey = jsonResponse.get("chave_app").toString();
 		String telephone = jsonResponse.get("telefone").toString();
 		String urlItunes = jsonResponse.get("url_itunes").toString();
