@@ -1,4 +1,0 @@
-android-passageiro:	 https://play.google.com/store/apps/details?id=br.com.novo1.passenger.drivermachine
-android-taxista:	 https://play.google.com/store/apps/details?id=br.com.novo1.taxi.drivermachine
-iOS-passageiro:	 https://apps.apple.com/br/app/novo-passageiro/id1537659047?l=pt&ls=1&mt=8
-apps-taxi-br:	 http://meuapp.mobi/novo

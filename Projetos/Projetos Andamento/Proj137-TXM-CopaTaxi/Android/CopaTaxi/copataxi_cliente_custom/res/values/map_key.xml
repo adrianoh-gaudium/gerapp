@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="map_key">AIzaSyB2odyZqaYFN_P6bKEphW_8unsutNTucuQ</string> 
-    <string name="facebook_app_id" translatable="false">1930804307198481</string>
-    <string name="fb_login_protocol_scheme">fb1930804307198481</string>
-    <string name="account_kit_client_token" translatable="false">5a96df8aa8652412d91448fcc9e19c3b</string>
-
-</resources>

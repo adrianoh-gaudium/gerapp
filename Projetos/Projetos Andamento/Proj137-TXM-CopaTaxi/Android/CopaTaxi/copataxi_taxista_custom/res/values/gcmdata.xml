@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- TODO - alterar o número SENDER_ID para o definitivo do cliente. -->
-    <string name="gcm_sender_id">613700135381</string>
-
-</resources>
